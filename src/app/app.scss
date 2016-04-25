@@ -1,0 +1,13 @@
+$md-font-url: "./fonts/";
+@import "~ng2-material/dist/font";
+@import "~ng2-material/source/all";
+
+.dragzone {
+  border: 2px dotted #ccc;
+  margin: 10px;
+}
+
+.footer button span i {
+  position:relative;
+  top: 5px;
+}

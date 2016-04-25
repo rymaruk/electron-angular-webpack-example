@@ -1,0 +1,30 @@
+{
+  "name": "electron-example",
+  "version": "1.0.0",
+  "description": "Electron example app",
+  "author": "hzeroo",
+  "license": "MIT",
+  "scripts": {
+    "build-main": "webpack --config webpack.config.electron-main.js --progress --profile --colors",
+    "build-renderer": "webpack --config webpack.config.electron-renderer.js --progress --profile --colors",
+    "build": "npm run build-main && npm run build-renderer",
+    "start": "electron app"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^1.1.1",
+    "css-loader": "^0.23.1",
+    "electron-builder": "^3.1.1",
+    "electron-prebuilt": "^0.37.2",
+    "file-loader": "^0.8.5",
+    "node-sass": "^3.4.2",
+    "raw-loader": "^0.5.1",
+    "resolve-url-loader": "^1.4.3",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.1",
+    "typescript": "^1.8.9",
+    "typings": "^0.7.9",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

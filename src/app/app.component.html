@@ -1,0 +1,33 @@
+<div flex layout="column" layout-fill (dragover)="false" (dragend)="false" (drop)="false">
+
+    <div flex="15" class="dragzone" layout="row" layout-align="center center" (dragover)="false" (dragend)="false" (drop)="handleDrop($event)">
+      <p>
+        <strong>Drop Your Images Here</strong>
+      </p>
+    </div>
+    
+    <div flex layout="row">
+      <md-content flex>
+        <md-list>
+          <md-subheader class="md-no-sticky">{{ images.length }} Files Added</md-subheader>
+          <md-divider></md-divider>
+          <md-list-item class="md-2-line" *ngFor="#image of images">
+            <img src="{{ image.path }}" class="md-avatar"/>
+            <div class="md-list-item-text" layout="column">
+              <h3>{{ image.name }}</h3>
+              <p>{{ image.size | eePrettifyBytes }}</p>
+            </div>
+            <button md-button class="md-icon-button" (click)="deleteItem(image)">
+              <i md-icon>close</i>
+            </button>
+            <md-divider></md-divider>
+          </md-list-item>
+        </md-list>
+      </md-content>
+    </div>
+    
+    <div flex="10" layout="row" layout-align="center center" class="footer">
+      <button flex layout-align="center center" md-button md-no-ink class="md-primary"><i md-icon>attach_file</i>Total Size: {{ totalSize | eePrettifyBytes }}</button>
+    </div>
+    
+</div>
