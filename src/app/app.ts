@@ -1,11 +1,9 @@
-///<reference path="../../typings/browser.d.ts"/>
+///<reference path="../../typings/index.d.ts"/>
 
-import {bootstrap} from "angular2/platform/browser";
-import {Component, ElementRef, ViewEncapsulation, Pipe, PipeTransform} from "angular2/core";
-import {NgFor} from "angular2/common";
-import {MATERIAL_DIRECTIVES, MATERIAL_PROVIDERS, MdDialog} from "ng2-material/all";
-import {DOM} from "angular2/src/platform/dom/dom_adapter";
-import {MdDialogConfig, MdDialogBasic, MdDialogRef} from "ng2-material/components/dialog/dialog";
+import {bootstrap} from "@angular/platform-browser-dynamic";
+import {Component, ElementRef, ViewEncapsulation, Pipe, PipeTransform} from "@angular/core";
+import {NgFor} from "@angular/common";
+import {MATERIAL_DIRECTIVES, MATERIAL_PROVIDERS} from "ng2-material";
 import * as _ from "lodash";
 
 @Pipe({name: "eePrettifyBytes"})
@@ -32,7 +30,7 @@ export default class App {
   images: Array<Object> = [];
   totalSize: number = 0;
 
-  constructor(public dialog: MdDialog, public element: ElementRef) {
+  constructor(public element: ElementRef) {
   }
 
   deleteItem(item: File) {
@@ -52,15 +50,6 @@ export default class App {
 
     return false;
   }
-
-  showAlert(title, text) {
-    let config = new MdDialogConfig()
-    .textContent(text)
-    .title(title)
-    .ok("OK");
-
-    this.dialog.open(MdDialogBasic, this.element, config);
-  };
 }
 
 bootstrap(App);

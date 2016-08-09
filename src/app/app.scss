@@ -1,6 +1,6 @@
 $md-font-url: "./fonts/";
-@import "~ng2-material/dist/font";
-@import "~ng2-material/source/all";
+@import "~ng2-material/font/font";
+@import "~ng2-material/all";
 
 .dragzone {
   border: 2px dotted #ccc;

@@ -1,8 +1,9 @@
 {
-  "ambientDependencies": {
-    "es6-shim": "registry:dt/es6-shim#0.31.2+20160317120654",
-    "github-electron": "registry:dt/github-electron#0.37.6+20160417155838",
-    "lodash": "registry:dt/lodash#3.10.0+20160327004937",
-    "node": "registry:dt/node#4.0.0+20160319033040"
+  "globalDependencies": {
+    "core-js": "registry:dt/core-js#0.0.0+20160602141332",
+    "github-electron": "registry:dt/github-electron#1.3.1+20160729121026",
+    "hammerjs": "registry:dt/hammerjs#2.0.8+20160724063812",
+    "lodash": "registry:dt/lodash#4.14.0+20160802150749",
+    "node": "registry:dt/node#6.0.0+20160807145350"
   }
 }
